@@ -1,18 +1,119 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>ChatKeep – Export ChatGPT, Claude & Gemini chats</title>
-<meta name="description" content="Export any ChatGPT, Claude or Gemini conversation to Markdown, PDF, HTML or JSON. Local-only, no account, fair one-time price.">
-<style>body{font:17px/1.6 system-ui,sans-serif;margin:0;color:#111}main{max-width:820px;margin:0 auto;padding:0 20px}header{background:#4f46e5;color:#fff;padding:60px 0;text-align:center}h1{font-size:40px;margin:0 0 10px}.btn{display:inline-block;background:#fff;color:#4f46e5;padding:14px 26px;border-radius:8px;font-weight:700;text-decoration:none;margin:8px}.btn.alt{background:transparent;color:#fff;border:2px solid #fff}
-section{padding:36px 0}ul.f{padding-left:20px}.cards{display:flex;gap:16px;flex-wrap:wrap}.card{flex:1;min-width:250px;border:1px solid #ddd;border-radius:12px;padding:20px}.card.pro{border-color:#4f46e5;border-width:2px}.price{font-size:34px;font-weight:800}footer{padding:30px 0;color:#666;font-size:14px;text-align:center}details{margin:10px 0}</style></head><body>
-<header><main><h1>Keep your AI chats. Anywhere.</h1><p>Export ChatGPT, Claude and Gemini conversations to clean Markdown, PDF, HTML or JSON in one click.<br>100% local. No account. Your chats never leave your browser.</p>
-<a class="btn" href="CHROME_WEB_STORE_URL">Add to Chrome – Free</a><a class="btn alt" href="#pricing">See Pro</a></main></header>
-<main>
-<section><h2>Why ChatKeep</h2><ul class="f"><li><b>Free core feature.</b> Markdown and TXT export is free, always. No paywall on the thing you installed it for.</li><li><b>Works on 3 sites.</b> ChatGPT, Claude, Gemini, with code blocks, tables and lists preserved.</li><li><b>Private.</b> Everything happens in your browser. No servers, no tracking.</li><li><b>Built to survive UI changes.</b> Multiple fallback detection methods per site, and fast fixes when sites change.</li></ul></section>
-<section id="pricing"><h2>Pricing</h2><div class="cards">
-<div class="card"><h3>Free</h3><div class="price">$0</div><ul class="f"><li>Export current chat to Markdown / TXT</li><li>ChatGPT, Claude, Gemini</li><li>Unlimited exports</li></ul></div>
-<div class="card pro"><h3>Pro</h3><div class="price">$29 <small style="font-size:14px">one-time</small></div><ul class="f"><li>Everything in Free</li><li>PDF, HTML and JSON export</li><li>Choose which messages to export</li><li>All future updates</li><li>Use on up to 3 browsers</li></ul><a class="btn" style="background:#4f46e5;color:#fff" href="LEMON_SQUEEZY_CHECKOUT_URL">Buy Pro</a></div></div></section>
-<section><h2>FAQ</h2>
-<details><summary>Do my chats get uploaded?</summary><p>No. ChatKeep reads the page you have open and builds the file locally. The only network call is license activation for Pro.</p></details>
-<details><summary>How do I get the PDF?</summary><p>Pro opens a print-ready page; choose "Save as PDF" in the print dialog.</p></details>
-<details><summary>What if a site changes and it breaks?</summary><p>Email us and we will ship a fix quickly. That is a promise, not a footnote.</p></details>
-<details><summary>Refunds?</summary><p>30-day money-back guarantee, no questions asked.</p></details></section></main>
-<footer>© ChatKeep · <a href="privacy.html">Privacy Policy</a> · Contact: SUPPORT_EMAIL<br>Not affiliated with OpenAI, Anthropic or Google.</footer></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ConvoBinder – Export ChatGPT, Claude &amp; Gemini chats to Markdown, PDF, HTML, JSON</title>
+<meta name="description" content="Export any ChatGPT, Claude or Gemini conversation to clean Markdown or TXT for free. PDF, HTML, JSON and message selection with Pro ($29 one-time). 100% local, no account.">
+<link rel="canonical" href="https://pierresil.github.io/chatkeep/">
+<meta property="og:title" content="ConvoBinder – Keep your AI chats as clean files">
+<meta property="og:description" content="Free Markdown/TXT export for ChatGPT, Claude and Gemini. 100% local. No account. Pro is $29 once.">
+<meta property="og:image" content="https://pierresil.github.io/chatkeep/img/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="img/icon128.png">
+<style>
+:root{--brand:#4f46e5;--ink:#0f172a;--muted:#475569;--line:#e2e8f0;--soft:#eef2ff}
+*{box-sizing:border-box}body{margin:0;font:17px/1.6 system-ui,-apple-system,"Segoe UI",Inter,sans-serif;color:var(--ink)}
+a{color:var(--brand)}.w{max-width:1080px;margin:0 auto;padding:0 22px}
+nav{display:flex;justify-content:space-between;align-items:center;padding:16px 0}nav .logo{display:flex;gap:10px;align-items:center;font-weight:800;font-size:20px;text-decoration:none;color:var(--ink)}nav .logo img{width:32px}
+nav .links a{margin-left:20px;text-decoration:none;color:var(--muted);font-weight:600;font-size:15px}
+.hero{background:linear-gradient(135deg,#eef2ff,#f8fafc 60%,#e0e7ff);padding:30px 0 60px}
+.hero .grid{display:grid;grid-template-columns:1fr 1.15fr;gap:40px;align-items:center}
+h1{font-size:48px;line-height:1.08;letter-spacing:-1px;margin:10px 0 18px}h1 em{font-style:normal;color:var(--brand)}
+.lead{font-size:20px;color:var(--muted);margin:0 0 24px}
+.btn{display:inline-block;background:var(--brand);color:#fff;padding:14px 24px;border-radius:10px;font-weight:700;text-decoration:none;margin:0 10px 10px 0}
+.btn.ghost{background:#fff;color:var(--brand);border:2px solid var(--brand)}
+.trust{font-size:14px;color:var(--muted)}.trust span{margin-right:14px;white-space:nowrap}
+.shot{width:100%;border-radius:14px;box-shadow:0 25px 60px rgba(30,27,75,.22)}
+section{padding:64px 0}h2{font-size:34px;letter-spacing:-.5px;margin:0 0 14px}.sub{color:var(--muted);font-size:19px;max-width:720px;margin:0 0 30px}
+.cols{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.card{border:1px solid var(--line);border-radius:14px;padding:22px;background:#fff}.card h3{margin:0 0 8px;font-size:19px}.card p{margin:0;color:var(--muted);font-size:16px}
+.problem{background:#0f172a;color:#e2e8f0}.problem h2{color:#fff}.problem .card{background:#1e293b;border-color:#334155}.problem .card p{color:#cbd5e1}.problem .card h3{color:#fff}
+.src{font-size:13px;color:#94a3b8;margin-top:18px}.src a{color:#a5b4fc}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;margin-bottom:50px}
+.steps{counter-reset:s;list-style:none;padding:0}.steps li{counter-increment:s;margin:14px 0;padding-left:46px;position:relative}.steps li:before{content:counter(s);position:absolute;left:0;top:-2px;width:32px;height:32px;border-radius:50%;background:var(--soft);color:var(--brand);font-weight:800;display:flex;align-items:center;justify-content:center}
+.pricing{background:#f8fafc}.plans{display:grid;grid-template-columns:1fr 1fr;gap:22px;max-width:820px}
+.plan{background:#fff;border:1px solid var(--line);border-radius:16px;padding:28px}.plan.pro{border:2px solid var(--brand);position:relative}.plan.pro .tag{position:absolute;top:-13px;left:24px;background:var(--brand);color:#fff;font-size:12px;font-weight:700;padding:3px 10px;border-radius:20px}
+.price{font-size:44px;font-weight:800}.price small{font-size:15px;color:var(--muted);font-weight:500}
+.plan ul{padding-left:0;list-style:none}.plan li{margin:8px 0}.plan li:before{content:"✓ ";color:var(--brand);font-weight:800}
+table.cmp{border-collapse:collapse;width:100%;max-width:820px;font-size:16px}table.cmp th,table.cmp td{border-bottom:1px solid var(--line);padding:12px;text-align:left}table.cmp th{background:#f1f5f9}
+details{border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin:10px 0;max-width:820px}summary{font-weight:700;cursor:pointer}details p{color:var(--muted);margin:10px 0 0}
+.cta{background:var(--brand);color:#fff;text-align:center}.cta h2{color:#fff}.cta .btn{background:#fff;color:var(--brand)}
+footer{padding:30px 0;color:var(--muted);font-size:14px;text-align:center}
+@media(max-width:820px){.hero .grid,.split,.plans,.cols{grid-template-columns:1fr}h1{font-size:36px}nav .links{display:none}}
+</style>
+</head>
+<body>
+<!-- DRAFT v2 for Pierre's approval. Placeholders to replace before publishing:
+     CHROME_WEB_STORE_URL, LEMON_SQUEEZY_CHECKOUT_URL, SUPPORT_EMAIL.
+     Check: refund policy (30 days) and "up to 3 browsers" match the Lemon Squeezy setup. -->
+<header class="hero"><div class="w">
+<nav><a class="logo" href="#"><img src="img/icon128.png" alt="">ConvoBinder</a><div class="links"><a href="#how">How it works</a><a href="#pricing">Pricing</a><a href="#faq">FAQ</a></div></nav>
+<div class="grid"><div>
+<h1>Your best AI answers, <em>saved as clean files</em>.</h1>
+<p class="lead">Export any ChatGPT, Claude or Gemini conversation to Markdown or TXT in one click — free, unlimited, and 100% inside your browser. No account. No upload.</p>
+<a class="btn" href="CHROME_WEB_STORE_URL">Add to Chrome — it's free</a><a class="btn ghost" href="#pricing">See Pro ($29 once)</a>
+<p class="trust"><span>✓ No signup</span><span>✓ No daily export cap</span><span>✓ Code &amp; tables preserved</span></p>
+</div><img class="shot" src="img/01-hero-crop.png" alt="Mockup of the ConvoBinder popup exporting a chat to Markdown"></div>
+</div></header>
+
+<section class="problem"><div class="w">
+<h2>Saving an AI chat shouldn't be this hard.</h2>
+<p class="sub" style="color:#cbd5e1">The built-in options are a full-account data dump that arrives by email, a public share link, or copy-paste that wrecks your formatting. And the extensions that fill the gap have their own problems:</p>
+<div class="cols">
+<div class="card"><h3>They break</h3><p>Chat sites change their layout constantly. Exporters that depend on one fragile hook stop working — often right when you need them.</p></div>
+<div class="card"><h3>They paywall the basics</h3><p>Daily download caps or a subscription just to save your own conversation once.</p></div>
+<div class="card"><h3>They want your data</h3><p>Some tools need an account or send conversations to a server to "process" them.</p></div>
+</div>
+<p class="src">Breakage and paywall friction are the two biggest complaint themes in an independent analysis of 4,241 Chrome Web Store reviews of AI chat export tools: <a href="https://chat2doc.net/en/blog/we-read-4241-reviews-of-ai-chat-export-tools" rel="nofollow">chat2doc.net study</a>. People also keep asking OpenAI for a native per-chat export, e.g. <a href="https://community.openai.com/t/native-chat-export-to-markdown-md-text-txt-and-json-formats/1393850" rel="nofollow">this OpenAI Community request</a>.</p>
+</div></section>
+
+<section id="how"><div class="w">
+<h2>ConvoBinder fixes exactly that.</h2>
+<p class="sub">A small, focused extension: one job, done well, on the three assistants you actually use.</p>
+<div class="cols" style="margin-bottom:50px">
+<div class="card"><h3>🆓 Free core, for real</h3><p>Markdown and TXT export are free and unlimited. Pro only adds extras — never the thing you installed it for.</p></div>
+<div class="card"><h3>🔒 100% local</h3><p>The file is built in your browser from the chat you have open. No account, no servers, no analytics. The only network call is the Pro license check.</p></div>
+<div class="card"><h3>🛠 Built to break less</h3><p>Several fallback detection methods per site, so a layout change is less likely to stop exports. If something does break, report it and I'll prioritise a fix.</p></div>
+</div>
+<div class="split"><div>
+<h3 style="font-size:24px;margin-top:0">Three clicks, one clean file</h3>
+<ol class="steps"><li>Open a conversation on chatgpt.com, claude.ai or gemini.google.com</li><li>Click the ConvoBinder icon in your toolbar</li><li>Pick a format and hit <b>Export</b> — it lands in your Downloads</li></ol>
+<p>Headings, lists, links, code blocks and tables come through intact — ready for Obsidian, Notion, GitHub, a doc or a printed report.</p>
+</div><img class="shot" src="img/05-clean-output-crop.png" alt="Mockup: Markdown and PDF output side by side"></div>
+<div class="split"><img class="shot" src="img/04-choose-messages-crop.png" alt="Mockup: choosing specific messages to export (Pro)"><div>
+<h3 style="font-size:24px;margin-top:0">Pro: keep only what matters</h3>
+<p>Long chats are full of dead ends. Tick the messages you want and export a tidy document as <b>PDF</b>, <b>HTML</b> or structured <b>JSON</b> for scripts, datasets and archives.</p>
+</div></div>
+</div></section>
+
+<section id="pricing" class="pricing"><div class="w">
+<h2>Simple, fair pricing</h2><p class="sub">No subscription. Pay once if you want the extras.</p>
+<div class="plans">
+<div class="plan"><h3>Free</h3><div class="price">$0</div><ul><li>Export to Markdown (.md) and TXT</li><li>ChatGPT, Claude and Gemini</li><li>Unlimited exports, no cap</li><li>No account, 100% local</li></ul><a class="btn ghost" href="CHROME_WEB_STORE_URL">Add to Chrome</a></div>
+<div class="plan pro"><span class="tag">ONE-TIME</span><h3>Pro</h3><div class="price">$29 <small>once, not monthly</small></div><ul><li>Everything in Free</li><li>PDF, HTML and JSON export</li><li>Choose which messages to export</li><li>All future updates included</li><li>Use on up to 3 browsers</li><li>30-day money-back guarantee</li></ul><a class="btn" href="LEMON_SQUEEZY_CHECKOUT_URL">Get Pro — $29</a></div>
+</div>
+<h3 style="margin-top:44px">How it compares to the usual options</h3>
+<table class="cmp"><tr><th></th><th>Built-in data export</th><th>Copy &amp; paste</th><th>ConvoBinder</th></tr>
+<tr><td>One chat, instantly</td><td>✗ whole account, by email</td><td>✓</td><td>✓</td></tr>
+<tr><td>Formatting kept</td><td>Raw JSON/HTML</td><td>Often lost</td><td>✓ Markdown, code, tables</td></tr>
+<tr><td>Works on ChatGPT, Claude, Gemini</td><td>Separate process each</td><td>✓</td><td>✓ one tool</td></tr>
+<tr><td>Data leaves your browser</td><td>—</td><td>No</td><td>No</td></tr>
+<tr><td>Cost</td><td>Free</td><td>Free</td><td>Free core · Pro $29 once</td></tr></table>
+</div></section>
+
+<section id="faq"><div class="w"><h2>FAQ</h2>
+<details><summary>Do my chats get uploaded anywhere?</summary><p>No. ConvoBinder reads the conversation you have open, only when you click Export, and builds the file locally. There are no ConvoBinder servers and no analytics. The only network request is Pro license activation/validation with Lemon Squeezy.</p></details>
+<details><summary>Do I need an account?</summary><p>No. Install and export. Pro uses a license key you paste into the popup — no login.</p></details>
+<details><summary>Which sites are supported?</summary><p>chatgpt.com (and chat.openai.com), claude.ai and gemini.google.com. Tell me which site you'd like next.</p></details>
+<details><summary>What's actually free?</summary><p>Exporting the open chat to Markdown and plain text, unlimited, forever. Pro adds PDF, HTML, JSON and choosing specific messages.</p></details>
+<details><summary>How does PDF export work?</summary><p>Pro opens a clean, print-ready page and your browser's print dialog — choose "Save as PDF". Text stays selectable and searchable.</p></details>
+<details><summary>Very long chats?</summary><p>ConvoBinder exports the messages loaded on the page. On some sites very long chats load older messages lazily — scroll to the top first so everything is loaded, then export.</p></details>
+<details><summary>What happens when ChatGPT/Claude/Gemini change their layout?</summary><p>ConvoBinder tries several detection methods per site, so small changes often don't break it. If an export comes out wrong, email SUPPORT_EMAIL with the site and what you saw, and I'll prioritise a fix.</p></details>
+<details><summary>Is $29 a subscription?</summary><p>No. One payment, all future updates, up to 3 browsers. 30-day money-back guarantee if it doesn't work for you.</p></details>
+<details><summary>Why these permissions?</summary><p>Access to the three chat sites is needed to read the conversation you choose to export; storage remembers your license; api.lemonsqueezy.com validates Pro keys. Nothing else.</p></details>
+<details><summary>Who makes this?</summary><p>I'm Pierre, an independent developer in Arkansas. ConvoBinder is a one-person project — feedback goes straight to me. ConvoBinder is not affiliated with OpenAI, Anthropic or Google.</p></details>
+</div></section>
+
+<section class="cta"><div class="w"><h2>Stop losing good answers.</h2><p style="font-size:19px;opacity:.9">Free Markdown &amp; TXT export. No account. Nothing uploaded.</p><a class="btn" href="CHROME_WEB_STORE_URL">Add ConvoBinder to Chrome</a></div></section>
+<footer>© 2026 ConvoBinder · <a href="privacy.html">Privacy Policy</a> · Contact: SUPPORT_EMAIL<br>ChatGPT, Claude and Gemini are trademarks of their respective owners. ConvoBinder is not affiliated with OpenAI, Anthropic or Google. Screenshots are illustrative mockups.</footer>
+</body></html>
